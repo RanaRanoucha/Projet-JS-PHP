@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postuler - NovaSphere</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <section class="background-section">
+        </section>
+    </header>
+
+    <section class="apply">
+        <h2>Postuler pour un emploi</h2>
+        <p>Veuillez remplir le formulaire ci-dessous pour soumettre votre candidature.</p>
+
+        <form action="submit-application.php" method="POST" enctype="multipart/form-data">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="position">Poste souhaité :</label>
+            <select id="position" name="position" required>
+                <option value="developer">Développeur Web</option>
+                <option value="project-manager">Chef de Projet IT</option>
+                <option value="hr-manager">Responsable RH</option>
+            </select>
+
+            <label for="cv">Téléchargez votre CV :</label>
+            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+
+            <label for="cover-letter">Lettre de motivation :</label>
+            <textarea id="cover-letter" name="cover-letter" rows="4" required></textarea>
+
+            <button type="submit">Soumettre ma candidature</button>
+        </form>
+    </section>
+
+    <p><a href="recruitment.html">Retour à la page des offres d'emploi</a></p>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/votre_nom" title="Instagram" target="_blank">📸</a>
+            <a href="https://www.facebook.com/profile.php?id=61571533354295" title="Facebook" target="_blank">📘</a>
+            <a href="https://www.linkedin.com/in/rana-smichi-046883245/" title="LinkedIn" target="_blank">🔗</a>
+        </div>
+        <p>&copy; 2025 NovaSphere. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

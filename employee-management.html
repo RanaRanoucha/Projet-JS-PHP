@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Employés - NovaSphere</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-employee-management">
+    <header class="background-section">
+        <h1>Management employee</h1>
+    </header>
+
+    <main class="container">
+        <section class="employee-filters">
+            <h2>Filtres de Recherche</h2>
+            <form action="/filter-employees" method="GET">
+                <input type="text" id="search" name="search" placeholder="Rechercher par nom...">
+                <select id="department-filter" name="department">
+                    <option value="">Tous les départements</option>
+                    <option value="IT">IT</option>
+                    <option value="Design">Design</option>
+                    <option value="Gestion">Gestion</option>
+                </select>
+                <button class="btn" type="submit">Filtrer</button>
+            </form>
+        </section>
+
+        <section class="employee-list">
+            <h2>Liste des Employés</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Poste</th>
+                        <th>Département</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Développeur Web</td>
+                        <td>IT</td>
+                        <td>
+                            <button class="btn">Modifier</button>
+                            <button class="btn">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>Designer UI/UX</td>
+                        <td>Design</td>
+                        <td>
+                            <button class="btn">Modifier</button>
+                            <button class="btn">Supprimer</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alice Johnson</td>
+                        <td>Chef de Projet</td>
+                        <td>Gestion</td>
+                        <td>
+                            <button class="btn">Modifier</button>
+                            <button class="btn">Supprimer</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="add-employee">
+            <h2>Ajouter un Employé</h2>
+            <form action="/add-employee" method="POST">
+                <div class="form-group">
+                    <label for="name">Nom :</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="poste">Poste :</label>
+                    <input type="text" id="poste" name="poste" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="departement">Département :</label>
+                    <input type="text" id="departement" name="departement" required>
+                </div>
+
+                <button type="submit" class="btn">Ajouter</button>
+            </form>
+        </section>
+        <p><a href="index.html">Retour à l'accueil</a></p>
+
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/votre_nom" title="Instagram" target="_blank">📸</a>
+            <a href="https://www.facebook.com/profile.php?id=61571533354295" title="Facebook" target="_blank">📘</a>
+            <a href="https://www.linkedin.com/in/rana-smichi-046883245/" title="LinkedIn" target="_blank">🔗</a>
+        </div>
+        <p>&copy; 2025 NovaSphere. Tous droits réservés.</p>
+    </footer>
+    
+</body>
+</html>
